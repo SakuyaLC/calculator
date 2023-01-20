@@ -191,6 +191,7 @@ namespace Calculator
             else
             {
                 calculateTextBox.Text = calculateTextBox.Text.Remove(calculateTextBox.Text.Length - 1);
+                currentCharacters--;
             }
         }
 
@@ -261,6 +262,7 @@ namespace Calculator
 
             buffer = "none";
             checkForClear();
+            currentCharacters = calculateTextBox.Text.Length;
         }
 
         //Misc
@@ -272,8 +274,8 @@ namespace Calculator
             }
             else if (currentCharacters != maxCharacters)
             {
-                currentCharacters++;
-                calculateTextBox.Text += "0";
+                currentCharacters += 2;
+                calculateTextBox.Text += "00";
             }
         }
 
