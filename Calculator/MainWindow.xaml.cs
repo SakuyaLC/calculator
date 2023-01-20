@@ -272,7 +272,7 @@ namespace Calculator
             {
 
             }
-            else if (currentCharacters != maxCharacters)
+            else if (currentCharacters < maxCharacters-1)
             {
                 currentCharacters += 2;
                 calculateTextBox.Text += "00";
